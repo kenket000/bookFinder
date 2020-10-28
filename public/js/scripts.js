@@ -28,13 +28,21 @@ function findBook(){
             wrapperDiv.appendChild(image);
             wrapperDiv.appendChild(div);
             //Tạo mục tác giả
-            var author = document.createElement('h6');
+            var author = document.createElement('p');
             author.innerHTML = 'Tác giả: ' + book.items[i].volumeInfo.authors;
             div.appendChild(author);
             //Tạo mục quốc gia
             var quocgia = document.createElement('p')
             quocgia.innerHTML = 'Quốc gia: ' + book.items[i].accessInfo.country;
             div.appendChild(quocgia);
+            //Page count
+            var pageCount = document.createElement('p');
+            pageCount.innerHTML = 'Số trang: ' + book.items[i].volumeInfo.pageCount;
+            div.appendChild(pageCount);
+            //Năm phát hành
+            var namphathanh = document.createElement('p');
+            namphathanh.innerHTML = 'Năm phát hành: ' + book.items[i].volumeInfo.publishedDate;
+            div.appendChild(namphathanh);
             // Mô tả
             var decs = document.createElement('p')
             decs.innerHTML = book.items[i].volumeInfo.description;
